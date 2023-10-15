@@ -20,9 +20,13 @@ main()
 float payableAmount(string day, string month, float amount)
 {
     float pay;
-    if (day == "Sunday" || month == "October")
+    if (day == "Sunday" && (month == "October"||month =="March" || month =="August"))
     {
         pay = amount - (amount * 0.1);
+    }
+    if (day == "Monday" && (month == "November"||month =="December"))
+    {
+        pay = amount - (amount * 0.05);
     }
     return pay;
 }
